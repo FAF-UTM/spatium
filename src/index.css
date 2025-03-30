@@ -1,25 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:400,300,600,700,800');
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+
+@font-face {
+  font-family: 'PF DinDisplay Pro';
+  font-style: normal;
+  font-weight: 900;
+  src: url('fonts/PFDinDisplayPro-Black.ttf') format('ttf');
+}
+
+body.standalone {
+  padding: 0;
+  margin: 0;
+}
+
+meta[name='apple-mobile-web-app-status-bar-style'] {
+  content: 'black-translucent'; /* Makes the status bar blend with the app background */
+}
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  font-family: Inter, serif;
+  font-size: 16px;
+  font-style: normal;
   font-weight: 400;
+  line-height: 22px;
 
   color-scheme: light dark;
+  color: #231f20;
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --theme_primary_color_black: #231f20;
+  --theme_primary_color_white: #ffffff;
+
+  --theme_primary_color_blue_0: #102a4c;
+  --theme_primary_color_blue_4: #f3f5ff;
+
+  --theme_primary_color_yellow_0: #f9b517;
+
+  /* Transition for smooth theme changes */
+  transition:
+    background-color 0.8s ease-in-out,
+    color 0.8s ease-in-out;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
+  margin: 0 !important;
+  padding: 0 !important;
   min-width: 320px;
   min-height: 100vh;
+  cursor:
+    url('/system/arrow-cursor-outline.svg') 12 12,
+    auto;
+  position: relative;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
+    color: #231f20;
+    background-color: #ffffff;
   }
+}
+
+/* Dark Mode Specific Styles */
+:root.dark-mode {
+  color: #ffffff;
+  background-color: #222;
+
+  --theme_primary_color_black: #ffffff;
+  --theme_primary_color_white: #231f20;
+
+  --theme_primary_color_blue_0: #102a4c;
+}
+
+.span_special_text {
+  margin: 2px 0 -2px;
+}
+
+.Button_icon {
+  margin: 0 0 0 0;
+  transition: margin 0.3s ease;
+}
+.sp_button:hover .Button_icon {
+  margin: 0 -3px 0 3px;
 }

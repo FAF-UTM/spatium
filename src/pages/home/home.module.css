@@ -1,2 +1,52 @@
-.home_container {
+.home_hero {
+  width: 100vw;
+  height: 100vh;
+  background: url('/images/home_hero.png');
+  overflow: hidden;
+  background-size: cover;
+  position: relative;
+}
+
+.home_container_center {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-43%);
+  width: 100%;
+  max-width: 1180px;
+}
+
+.home_container_center_top {
+  width: 608px;
+}
+
+.home_container_center_top_title {
+  color: #fff;
+  font-family: 'PF DinDisplay Pro';
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 100%; /* 96px */
+}
+.home_container_center_top_subtitle {
+  margin-top: -12px;
+  color: #fff;
+  font-family: 'PF DinDisplay Pro';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 100%; /* 16px */
+}
+.home_container_center_bottom {
+  width: 608px;
+  color: #fff;
+  font-family: 'PF DinDisplay Pro';
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
 }
