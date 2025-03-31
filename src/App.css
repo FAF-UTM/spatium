@@ -1,2 +1,50 @@
 #root {
 }
+
+.main {
+  width: 90vw;
+  max-width: 1180px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 20px;
+  gap: 80px;
+}
+
+.page {
+  box-sizing: border-box;
+  margin: 0 auto 20px;
+  min-height: calc(var(--vh, 1vh) * 100 - 106px);
+}
+@media (max-width: 1000px) {
+  .page {
+    min-height: calc(var(--vh, 1vh) * 100 - 84px);
+  }
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.page_title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15vh;
+  padding: 9vh 0 0;
+  box-sizing: border-box;
+  font-size: 36px;
+  color: var(--theme_primary_color_black);
+  font-family: 'PF DinDisplay Pro';
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}

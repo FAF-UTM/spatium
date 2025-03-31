@@ -9,6 +9,12 @@
   align-items: center;
   justify-content: space-between;
 }
+.theme_light {
+  padding: 0px 20px 0;
+}
+.theme_light .topbnav_menu_home {
+  transform: scale(0.6);
+}
 .topnav_right {
   color: var(--theme_primary_color_white);
   font-family: 'PF DinDisplay Pro';
@@ -43,9 +49,9 @@
 }
 .topbnav_submenu {
   position: absolute;
-  top: 70px;
+  top: 40px;
   left: 50%;
-  transform: translateX(-50%) translateY(0%);
+  transform: translateX(-45%) translateY(50%);
   background: white;
   padding: 20px;
   min-width: 180px;
@@ -55,12 +61,17 @@
   transition:
     opacity 0.3s ease-in-out,
     transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
 }
 
 .topbnav_submenu_show {
   opacity: 1 !important;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-45%) translateY(0%);
   pointer-events: all;
+  z-index: 9999999999;
 }
 .topbnav_menu_lang {
   margin-left: -10px;
@@ -133,6 +144,7 @@
   .topbnav_menu_home {
     transform: scale(0.6);
   }
+
   .topbnav_menu_contactus {
     margin: -5px 0 10px;
   }
@@ -155,4 +167,7 @@
   .topnav_right {
     gap: 30px;
   }
+}
+.theme_light_menu {
+  background: var(--theme_primary_color_blue_4);
 }

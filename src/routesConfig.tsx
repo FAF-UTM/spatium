@@ -1,11 +1,11 @@
 // routesConfig.tsx
 import React from 'react';
 import Home from './pages/home/Home';
-import NotFound from './pages/notfound/NotFound';
 import About from './pages/about/About.tsx';
 import Projects from './pages/projects/Projects.tsx';
 import News from './pages/news/News.tsx';
 import Contact from './pages/contact/Contact.tsx';
+import History from './pages/history/History.tsx';
 
 export interface RouteConfig {
   path: string;
@@ -41,8 +41,8 @@ export const routesConfig: RouteConfig[] = [
     element: React.createElement(Contact),
   },
   {
-    path: '*',
-    i18nKey: 'not_found.title',
-    element: React.createElement(NotFound),
+    path: '/:lang/history',
+    i18nKey: '',
+    element: React.createElement(History),
   },
 ];

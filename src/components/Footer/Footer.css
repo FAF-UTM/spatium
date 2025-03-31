@@ -1,0 +1,106 @@
+.footer_copyright {
+  display: flex;
+  margin: 0 auto;
+}
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  margin-top: 80px;
+}
+
+#footer_btn_scroll_up {
+  margin-top: 10px;
+}
+
+.footer_main {
+  display: flex;
+  width: 100%;
+  padding: 45px 0 35px 0;
+  align-items: center;
+  background: var(--theme_primary_color_blue_0);
+}
+
+.footer_main_top {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.footer_main_top_social {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer_main_top_text {
+  color: #fff;
+  font-family: 'PF DinDisplay Pro';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 112.5% */
+  max-width: 320px;
+}
+.footer_main .main {
+  gap: 30px;
+}
+
+.footer button {
+  padding: 10px 28px !important;
+}
+.footer_main_top_social a {
+  transform: scale(1);
+}
+.footer_main_top_social a:hover {
+  transform: scale(1.05);
+}
+
+.footer_block_about_me_links {
+  display: flex;
+  gap: 15px;
+}
+#footer_main_top_social_tiktok:hover svg path {
+  fill: #ff3797;
+}
+#footer_main_top_social_linkedin:hover svg path {
+  fill: #008cc9;
+}
+#footer_main_top_social_instagram:hover svg path {
+  fill: #fb324f;
+}
+#footer_main_top_social_facebook:hover svg path {
+  fill: #45619d;
+}
+#footer_main_top_social_ok:hover svg path {
+  fill: #f2720c;
+}
+#footer_main_top_social_telegram:hover svg path {
+  fill: #32afed;
+}
+#footer_main_top_social_x_com:hover svg path {
+  fill: #55acee;
+}
+
+@media (max-width: 550px) {
+  .footer_main_top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer_main_top_social {
+    margin-top: -10px;
+  }
+}
+
+@media (max-width: 290px) {
+  .footer_main_top_social {
+    gap: 10px;
+  }
+}

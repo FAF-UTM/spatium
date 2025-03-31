@@ -78,7 +78,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
           <div
             className={`${styles.topbnav_submenu} ${
               activeMenu === 'menu_1' && styles.topbnav_submenu_show
-            }`}
+            } ${theme != 'dark' && styles.theme_light_menu}`}
           >
             <Link to={'/news'} className={styles.topbnav_submenu_btn}>
               News
@@ -100,8 +100,18 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
           <div
             className={`${styles.topbnav_submenu} ${
               activeMenu === 'menu_2' && styles.topbnav_submenu_show
-            }`}
-          ></div>
+            } ${theme != 'dark' && styles.theme_light_menu}`}
+          >
+            <Link to={'/about'} className={styles.topbnav_submenu_btn}>
+              About us
+            </Link>
+            <Link to={'/history'} className={styles.topbnav_submenu_btn}>
+              Our history
+            </Link>
+            <Link to={'/comunity'} className={styles.topbnav_submenu_btn}>
+              Comunity
+            </Link>
+          </div>
         </div>
         <Link to="/projects" className={styles.topbnav_menu}>
           <Icon type={'empty'} className={styles.topbnav_menu_mobile_desktop} />

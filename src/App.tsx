@@ -6,6 +6,8 @@ import { LanguageProvider } from './context/LanguageContext.tsx';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n.tsx';
 import { routesConfig } from './routesConfig.tsx';
+import DynamicPages from './components/DynamicPages/DynamicPages.tsx';
+import NotFound from './pages/notfound/NotFound.tsx';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
               {routesConfig.map((route, index) => (
                 <Route key={index} path={route.path} element={route.element} />
               ))}
+              <Route path="/*" element={<DynamicPages />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </LanguageProvider>
         </BrowserRouter>
