@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Footer from '../../components/Footer/Footer.tsx';
-import styles from '../../styles/NotFound.module.css';
+import styles from './notfound.module.css';
 import Page from '../../components/Page.tsx';
 import Icon from '../../components/Icon.tsx';
 import Navbar from '../../components/Navbar/Navbar.tsx';
@@ -56,7 +56,7 @@ export default function NotFound() {
           .
         </div>
       </Page>
-      <Footer />
+      <Footer button={false} />
     </>
   );
 }
