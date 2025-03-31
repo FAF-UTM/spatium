@@ -1,0 +1,23 @@
+[
+  {
+    "img": "/images/24534626.png",
+    "title": "Traffiking Escape",
+    "date": "10.01.2025",
+    "description": "Currently in development, Trafficking Escape is an innovative game designed...",
+    "to": "/trafficking-escape"
+  },
+  {
+    "img": "/images/24534624.png",
+    "title": "Hackathon 2024",
+    "date": "24.11.2024",
+    "description": "Escape Van is a unique, on-the-road project that brings the harsh realities...",
+    "to": "/hackathon"
+  },
+  {
+    "img": "/images/24534625.png",
+    "title": "Escape van is comming",
+    "date": "18.03.2024",
+    "description": "Escape Van is a unique, on-the-road project that brings the harsh realities...",
+    "to": "/escape-van"
+  }
+]

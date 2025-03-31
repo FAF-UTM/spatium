@@ -6,7 +6,28 @@
   font-family: 'PF DinDisplay Pro';
   font-style: normal;
   font-weight: 900;
-  src: url('fonts/PFDinDisplayPro-Black.ttf') format('ttf');
+  src: url('/fonts/PFDinDisplayPro-Black.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'PF DinDisplay Pro';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/fonts/PFDinDisplayPro-Black.eot') format('eot');
+}
+
+@font-face {
+  font-family: 'PF DinDisplay Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/PFDinDisplayPro-Light.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'PF DinDisplay Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/PFDinDisplayPro-Light.eot') format('eot');
 }
 
 body.standalone {

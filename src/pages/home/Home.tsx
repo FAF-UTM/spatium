@@ -2,6 +2,7 @@ import styles from './home.module.css';
 import React from 'react';
 import Navbar from '../../components/Navbar/Navbar.tsx';
 import Button from '../../components/Button.tsx';
+import Footer from '../../components/Footer/Footer.tsx';
 
 const Home: React.FC = () => {
   return (
@@ -37,6 +38,7 @@ const Home: React.FC = () => {
           </Button>
         </div>
       </div>
+      <Footer button={false} style={{ marginTop: '0px' }} />
     </div>
   );
 };

@@ -142,7 +142,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
         <Icon type="en" className={styles.topbnav_menu_mobile} />
         <Icon
           type="menu"
-          color={'#fff'}
+          color={theme != 'dark' ? 'var(--theme_primary_color_blue_0)' : '#fff'}
           className={styles.topbnav_menu_mobile}
           onClick={toggleMenuVisibility}
         />

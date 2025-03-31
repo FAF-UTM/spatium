@@ -131,6 +131,7 @@
     left: 0;
     padding: 20px;
     box-sizing: border-box;
+    z-index: 99999999;
   }
   .topnav_right_show {
     display: flex;
@@ -166,6 +167,7 @@
   }
   .topnav_right {
     gap: 30px;
+    box-shadow: 4px 18px 13.9px 0px rgba(0, 0, 0, 0.35);
   }
 }
 .theme_light_menu {

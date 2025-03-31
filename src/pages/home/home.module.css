@@ -17,11 +17,14 @@
   left: 50%;
   transform: translateX(-50%) translateY(-43%);
   width: 100%;
-  max-width: 1180px;
+  max-width: 1220px;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .home_container_center_top {
-  width: 608px;
+  width: 100%;
+  max-width: 610px;
 }
 
 .home_container_center_top_title {
@@ -42,11 +45,32 @@
   line-height: 100%; /* 16px */
 }
 .home_container_center_bottom {
-  width: 608px;
+  width: 100%;
+  max-width: 610px;
   color: #fff;
   font-family: 'PF DinDisplay Pro';
   font-size: 38px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+}
+
+@media (max-width: 550px) {
+  .home_container_center_top {
+    transform-origin: bottom left;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .home_container_center_top_title {
+    font-size: 65px;
+  }
+  .home_container_center_top_subtitle {
+    font-size: 10px;
+  }
+
+  .home_container_center_bottom {
+    font-size: 24px;
+    margin-top: -10px;
+  }
 }
