@@ -2,5 +2,9 @@
   "lang": "nl",
   "general": {
     "home": "Startpagina"
+  },
+  "navbar": {
+    "media": "media",
+    "about_us": "About us"
   }
 }

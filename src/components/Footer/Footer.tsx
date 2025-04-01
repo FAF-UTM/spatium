@@ -209,8 +209,8 @@ const Footer: React.FC<FooterProps> = ({
           </div>
 
           <div className="footer_block_about_me_links">
-            <LinkButton to="/about">About us</LinkButton>
-            <LinkButton to="/projects">Projects</LinkButton>
+            <LinkButton to="/about">{t('navbar.about_us')}</LinkButton>
+            <LinkButton to="/projects">{t('navbar.projects')}</LinkButton>
           </div>
         </div>
       </div>

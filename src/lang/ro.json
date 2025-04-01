@@ -2,5 +2,46 @@
   "lang": "ro",
   "general": {
     "home": "Acasa"
+  },
+  "navbar": {
+    "media": "Media",
+    "about_us": "Despre noi",
+    "projects": "Proiecte",
+    "contact_us": "Contacte",
+    "news": "Noutăți",
+    "gallery": "Galerie"
+  },
+  "home": {
+    "learn_more": "Mai multe",
+    "inovative": "Soluții inovatoare și cercetare colaborativă pentru protejarea comunităților vulnerabile."
+  },
+  "about": {
+    "pageTitle": "Despre noi",
+    "aboutSpatium": {
+      "title": "Despre SPATIUM",
+      "subtitle": "",
+      "text": "SPATIUM – Centrul de Cercetare pentru Suport Tehnologic și Informațional – este situat la Facultatea de Calculatoare, Informatică și Microelectronică (FCIM) a Universității Tehnice din Moldova (UTM). Centrul nostru este dedicat combaterii traficului de persoane și sclaviei moderne, valorificând puterea inovației digitale și cercetării colaborative."
+    },
+    "ourMission": {
+      "title": "Misiunea Noastră",
+      "text": "La SPATIUM, ne propunem să dezvoltăm instrumente tehnologice avansate și să oferim informații precise care să ajute la prevenirea și reducerea riscurilor asociate traficului de persoane. Întrucât traficul de persoane este în creștere la nivel global, considerăm că acțiunea imediată este esențială. Prin cercetările și proiectele noastre inovatoare, ne angajăm să creștem gradul de conștientizare și să echipăm comunitățile cu soluțiile de care au nevoie pentru a combate această problemă gravă."
+    },
+    "whatWeDo": {
+      "title": "Ce Facem",
+      "list": [
+        "Inovație prin Colaborare: În parteneriat cu organizații internaționale, cum ar fi Poliția Națională Olandeză și publicații media precum “Ziarul de Gardă”, reunim experți din mediul academic, forțele de ordine și industria tehnologică.",
+        "Hackathoane și Ateliere: Hackathoanele noastre servesc ca forumuri dinamice unde dezvoltatori, cercetători și profesioniști din industrie generează idei și construiesc prototipuri digitale destinate să alerteze comunitățile și să împuternicească jurnaliștii.",
+        "Cercetare și Dezvoltare: Ne implicăm activ în proiecte precum “ESCAPEVAN MOLDOVA”, care au demonstrat deja un impact semnificativ în societate prin crearea de soluții tehnologice practice și ușor de utilizat."
+      ]
+    },
+    "ourTeam": {
+      "title": "Echipa Noastră",
+      "text": "Conduși de Profesorul Dumitru CIORBĂ, Mariana CATRUC și Gabriel ZAHARIA, ne străduim să promovăm o cultură a inovației și a responsabilității sociale prin inițiativele și parteneriatele noastre de cercetare."
+    },
+    "ourVision": {
+      "title": "Viziunea Noastră",
+      "text": "Ne imaginăm un viitor în care tehnologia este forța motrice a schimbării sociale — un viitor în care instrumentele digitale și informațiile de încredere contribuie la construirea unor comunități mai sigure și a unei societăți mai bine informate. Combinând excelența academică, colaborarea internațională și cercetarea de ultimă generație, SPATIUM se află în fruntea transformării ideilor în soluții care fac cu adevărat diferența."
+    },
+    "conclusion": ""
   }
 }

@@ -2,5 +2,46 @@
   "lang": "en",
   "general": {
     "home": "Home"
+  },
+  "navbar": {
+    "media": "media",
+    "about_us": "About us",
+    "projects": "Projects",
+    "contact_us": "Contact Us",
+    "news": "News",
+    "gallery": "Gallery"
+  },
+  "home": {
+    "learn_more": "Learn more",
+    "inovative": "Innovative solutions and collaborative research to protect vulnerable communities."
+  },
+  "about": {
+    "pageTitle": "About us",
+    "aboutSpatium": {
+      "title": "About SPATIUM",
+      "subtitle": "",
+      "text": "SPATIUM – the Research Center for Technological Support and Information – is based at the Faculty of Computers, Informatics, and Microelectronics (FCIM) of the Technical University of Moldova (UTM). Our center is dedicated to fighting human trafficking and modern slavery by harnessing the power of digital innovation and collaborative research."
+    },
+    "ourMission": {
+      "title": "Our Mission",
+      "text": "At SPATIUM, we aim to develop advanced technological tools and provide accurate information that help prevent and reduce the risks associated with human trafficking. With human trafficking on the rise globally, we believe that immediate action is essential. Through our research and innovative projects, we are committed to raising awareness and equipping communities with the solutions they need to combat this grave issue."
+    },
+    "whatWeDo": {
+      "title": "What We Do",
+      "list": [
+        "Innovation through Collaboration: In partnership with international organizations such as the Dutch National Police and media outlets like “Ziarul de Gardă”, we bring together experts from academia, law enforcement, and the tech industry.",
+        "Hackathons and Workshops: Our hackathons serve as dynamic forums where developers, researchers, and industry professionals brainstorm and build digital prototypes aimed at alerting communities and empowering journalists.",
+        "Research and Development: We actively engage in projects like “ESCAPEVAN MOLDOVA,” which have already shown significant societal impact by creating practical, user-friendly technological solutions."
+      ]
+    },
+    "ourTeam": {
+      "title": "Our Team",
+      "text": "Led by Professor Dumitru CIORBĂ, Mariana CATRUC and Gabriel ZAHARIA, we strive to foster a culture of innovation and social responsibility through our research initiatives and partnerships."
+    },
+    "ourVision": {
+      "title": "Our Vision",
+      "text": "We envision a future where technology is the driving force behind social change — a future where digital tools and reliable information help build safer communities and a more informed society. By combining academic excellence, international collaboration, and cutting-edge research, SPATIUM is at the forefront of transforming ideas into solutions that make a real difference."
+    },
+    "conclusion": ""
   }
 }

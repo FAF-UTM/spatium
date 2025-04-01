@@ -5,13 +5,21 @@ import backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import translationEnglish from './lang/en.json';
 import translationNetherland from './lang/nl.json';
+import translationRomanian from './lang/ro.json';
+import translationRussian from './lang/ru.json';
 
 const resources = {
   en: {
     translation: translationEnglish,
   },
+  ro: {
+    translation: translationRomanian,
+  },
   nl: {
     translation: translationNetherland,
+  },
+  ru: {
+    translation: translationRussian,
   },
 };
 

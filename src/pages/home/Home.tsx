@@ -3,8 +3,10 @@ import React from 'react';
 import Navbar from '../../components/Navbar/Navbar.tsx';
 import Button from '../../components/Button.tsx';
 import Footer from '../../components/Footer/Footer.tsx';
+import { useTranslation } from 'react-i18next';
 
 const Home: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <div className={styles.home_container}>
       <div className={styles.home_hero}>
@@ -20,8 +22,7 @@ const Home: React.FC = () => {
             </div>
           </div>
           <div className={styles.home_container_center_bottom}>
-            Innovative solutions and collaborative research to protect
-            vulnerable communities.
+            {t('home.inovative')}
           </div>
           <Button
             style={{ textTransform: 'uppercase' }}
@@ -34,7 +35,7 @@ const Home: React.FC = () => {
             to="/about"
             icon={'arrow_right'}
           >
-            <span className={'span_special_text'}>Learn More</span>
+            <span className={'span_special_text'}> {t('home.learn_more')}</span>
           </Button>
         </div>
       </div>

@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import styles from './Navbar.module.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Icon from '../Icon.tsx';
 import Button from '../Button.tsx';
+import { useTranslation } from 'react-i18next';
 
 interface NavbarProps {
   theme?: string;
 }
 const Navbar: React.FC<NavbarProps> = ({ theme }) => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
+  const { t, i18n } = useTranslation();
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
-
+  const toggleMenuVisibility = () => setIsMenuVisible(!isMenuVisible);
   const toggleMenu = (menuKey: string) => {
     if (activeMenu !== menuKey) {
       setActiveMenu(menuKey);
@@ -19,7 +21,20 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
     }
   };
 
-  const toggleMenuVisibility = () => setIsMenuVisible(!isMenuVisible);
+  const navigate = useNavigate();
+  const handleChangeLanguage = (lang: string) => {
+    i18n.changeLanguage(lang).then(() => {
+      const pathParts = location.pathname.split('/').filter(Boolean);
+      if (['en', 'ro', 'ru'].includes(pathParts[0])) {
+        pathParts[0] = lang;
+      } else {
+        pathParts.unshift(lang);
+      }
+      const newPath = `/${pathParts.join('/')}/`.replace(/\/+$/, '/');
+      navigate(newPath);
+      localStorage.setItem('i18nextLng', lang);
+    });
+  };
 
   return (
     <div
@@ -74,14 +89,17 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
               activeMenu === 'menu_1' && styles.topbnav_menu_icon_rotate
             }`}
           />
-          <span className={'span_special_text'}>Media</span>
+          <span className={'span_special_text'}>{t('navbar.media')}</span>
           <div
             className={`${styles.topbnav_submenu} ${
               activeMenu === 'menu_1' && styles.topbnav_submenu_show
             } ${theme != 'dark' && styles.theme_light_menu}`}
           >
             <Link to={'/news'} className={styles.topbnav_submenu_btn}>
-              News
+              {t('navbar.news')}
+            </Link>
+            <Link to={'/gallery'} className={styles.topbnav_submenu_btn}>
+              {t('navbar.gallery')}
             </Link>
           </div>
         </div>
@@ -96,7 +114,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
               activeMenu === 'menu_2' && styles.topbnav_menu_icon_rotate
             }`}
           />
-          <span className={'span_special_text'}>About Us</span>
+          <span className={'span_special_text'}>{t('navbar.about_us')}</span>
           <div
             className={`${styles.topbnav_submenu} ${
               activeMenu === 'menu_2' && styles.topbnav_submenu_show
@@ -115,7 +133,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
         </div>
         <Link to="/projects" className={styles.topbnav_menu}>
           <Icon type={'empty'} className={styles.topbnav_menu_mobile_desktop} />
-          Projects
+          {t('navbar.projects')}
         </Link>
 
         <Button
@@ -129,13 +147,33 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
           to="/contact"
           icon={'arrow_right'}
         >
-          <span className={'span_special_text'}>Contact Us</span>
+          <span className={'span_special_text'}>{t('navbar.contact_us')}</span>
         </Button>
 
-        <Icon
-          type="en"
-          className={`${styles.topbnav_menu_lang} ${styles.topbnav_menu_mobile_desktop_only}`}
-        />
+        <div
+          className={styles.topbnav_menu_lang_btn}
+          onClick={() => toggleMenu('menu_3')}
+        >
+          <div className={styles.topbnav_menu_mobile_desktop_only_btn}>
+            {i18n.language === 'en' ? (
+              <Icon type="en" size="28px" />
+            ) : i18n.language === 'ro' ? (
+              <Icon type="ro" size="28px" />
+            ) : (
+              <Icon type="ru" size="28px" />
+            )}
+          </div>
+
+          <div
+            className={`${styles.topbnav_submenu_lang_popup} ${
+              activeMenu === 'menu_3' && styles.topbnav_submenu_lang_popup_show
+            }`}
+          >
+            <Icon type="en" onClick={() => handleChangeLanguage('en')} />
+            <Icon type="ro" onClick={() => handleChangeLanguage('ro')} />
+            <Icon type="ru" onClick={() => handleChangeLanguage('ru')} />
+          </div>
+        </div>
       </div>
 
       <div className={styles.topbnav_menu_mobile_block}>
