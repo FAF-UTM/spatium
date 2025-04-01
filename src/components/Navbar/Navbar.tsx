@@ -151,10 +151,10 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
         </Button>
 
         <div
-          className={styles.topbnav_menu_lang_btn}
+          className={`${styles.topbnav_menu_lang_btn} ${styles.topbnav_menu_mobile_desktop_only}`}
           onClick={() => toggleMenu('menu_3')}
         >
-          <div className={styles.topbnav_menu_mobile_desktop_only_btn}>
+          <div>
             {i18n.language === 'en' ? (
               <Icon type="en" size="28px" />
             ) : i18n.language === 'ro' ? (
@@ -176,8 +176,34 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
         </div>
       </div>
 
-      <div className={styles.topbnav_menu_mobile_block}>
-        <Icon type="en" className={styles.topbnav_menu_mobile} />
+      <div className={`${styles.topbnav_menu_mobile_block}`}>
+        <div
+          className={` ${styles.topbnav_menu_mobile} ${styles.topbnav_menu_lang_btn}`}
+          onClick={() => {
+            setIsMenuVisible(false);
+            toggleMenu('menu_4');
+          }}
+        >
+          <div>
+            {i18n.language === 'en' ? (
+              <Icon type="en" size="28px" />
+            ) : i18n.language === 'ro' ? (
+              <Icon type="ro" size="28px" />
+            ) : (
+              <Icon type="ru" size="28px" />
+            )}
+          </div>
+          <div
+            style={{ marginTop: '10px' }}
+            className={`${styles.topbnav_submenu_lang_popup} ${
+              activeMenu === 'menu_4' && styles.topbnav_submenu_lang_popup_show
+            }`}
+          >
+            <Icon type="en" onClick={() => handleChangeLanguage('en')} />
+            <Icon type="ro" onClick={() => handleChangeLanguage('ro')} />
+            <Icon type="ru" onClick={() => handleChangeLanguage('ru')} />
+          </div>
+        </div>
         <Icon
           type="menu"
           color={theme != 'dark' ? 'var(--theme_primary_color_blue_0)' : '#fff'}

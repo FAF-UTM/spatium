@@ -28,11 +28,11 @@ const About: React.FC = () => {
             <b>{t('about.whatWeDo.title')}</b>
           </div>
           <ul>
-            {(t('about.whatWeDo.list', { returnObjects: true }) as string[]).map(
-              (item: string, index: number) => (
-                <li key={index}>{item}</li>
-              )
-            )}
+            {(
+              t('about.whatWeDo.list', { returnObjects: true }) as string[]
+            ).map((item: string, index: number) => (
+              <li key={index}>{item}</li>
+            ))}
           </ul>
           <div className={styles.about_title}>
             <b>{t('about.ourTeam.title')}</b>
