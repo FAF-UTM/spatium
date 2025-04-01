@@ -1,23 +1,35 @@
 [
   {
     "img": "/images/24534626.png",
-    "title": "Traffiking Escape",
+    "title_ro": "Trafficking Escape",
+    "title_ru": "Trafficking Escape",
+    "title_en": "Trafficking Escape",
     "date": "10.01.2025",
-    "description": "Currently in development, Trafficking Escape is an innovative game designed...",
+    "description_ro": "În prezent în dezvoltare, Trafficking Escape este un joc inovator conceput pentru ...",
+    "description_ru": "Находящаяся в разработке игра Trafficking Escape — это инновационный проект, созданный ...",
+    "description_en": "Currently in development, Trafficking Escape is an innovative game designed to raise ...",
     "to": "/trafficking-escape"
   },
   {
     "img": "/images/24534624.png",
-    "title": "Hackathon 2024",
+    "title_ro": "Hackathon 2024",
+    "title_ru": "Хакатон 2024",
+    "title_en": "Hackathon 2024",
     "date": "24.11.2024",
-    "description": "Escape Van is a unique, on-the-road project that brings the harsh realities...",
+    "description_ro": "Escape Van este un proiect unic, desfășurat pe teren, care aduce în prim-plan ...",
+    "description_ru": "Escape Van — уникальный проект, проходящий в дороге, который демонстрирует ...",
+    "description_en": "Escape Van is a unique, on-the-road project that brings the harsh realities ...",
     "to": "/hackathon"
   },
   {
     "img": "/images/24534625.png",
-    "title": "Escape van is comming",
+    "title_ro": "Escape Van vine curând",
+    "title_ru": "Escape Van скоро прибудет",
+    "title_en": "Escape Van is coming",
     "date": "18.03.2024",
-    "description": "Escape Van is a unique, on-the-road project that brings the harsh realities...",
+    "description_ro": "Escape Van este un proiect mobil inovator care aduce în atenția publicului problemele traficului de ...",
+    "description_ru": "Escape Van — это инновационный передвижной проект, освещающий проблему торговли людьми через ...",
+    "description_en": "Escape Van is a unique, on-the-road project that brings the harsh realities of human trafficking ...",
     "to": "/escape-van"
   }
 ]

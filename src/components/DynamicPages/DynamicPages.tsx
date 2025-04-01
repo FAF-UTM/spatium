@@ -1,20 +1,51 @@
 import React, { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Footer from '../Footer/Footer';
-import NotFound from '../../pages/notfound/NotFound.tsx';
-import Page from '../Page.tsx';
+import NotFound from '../../pages/notfound/NotFound';
+import Page from '../Page';
 import './DynamicPages.css';
-import Navbar from '../Navbar/Navbar.tsx';
+import Navbar from '../Navbar/Navbar';
+import { useTranslation } from 'react-i18next';
 
-interface Page {
+interface DynamicPage {
   link: string;
-  content: string;
-  title: string;
-  type?: string; // Optional since not all pages might have a type
+  title_ro: string;
+  title_ru: string;
+  title_en: string;
+  content_ro: string;
+  content_ru: string;
+  content_en: string;
+  type?: string;
 }
 
 const DynamicPages: React.FC = () => {
-  const [dynamicPages, setDynamicPages] = useState<Page[]>([]);
+  const [dynamicPages, setDynamicPages] = useState<DynamicPage[]>([]);
+  const { i18n } = useTranslation();
+
+  // Helper functions to get the proper title and content based on the current language
+  // const getTitleByLanguage = (page: DynamicPage): string => {
+  //   switch (i18n.language) {
+  //     case 'ro':
+  //       return page.title_ro;
+  //     case 'ru':
+  //       return page.title_ru;
+  //     case 'en':
+  //     default:
+  //       return page.title_en;
+  //   }
+  // };
+
+  const getContentByLanguage = (page: DynamicPage): string => {
+    switch (i18n.language) {
+      case 'ro':
+        return page.content_ro;
+      case 'ru':
+        return page.content_ru;
+      case 'en':
+      default:
+        return page.content_en;
+    }
+  };
 
   useEffect(() => {
     // Fetch the pages.json file from the public folder
@@ -34,15 +65,6 @@ const DynamicPages: React.FC = () => {
     fetchPages();
   }, []);
 
-  // const getTypeUrl = (type: string | undefined): string => {
-  //   switch (type) {
-  //     case 'News':
-  //       return '/blog';
-  //     default:
-  //       return '/'; // Fallback to home if no type or unknown type
-  //   }
-  // };
-
   return (
     <Routes>
       {dynamicPages.map((page) => (
@@ -51,20 +73,16 @@ const DynamicPages: React.FC = () => {
           path={`/:lang/${page.link}`}
           element={
             <>
-              {/*<Breadcrumb*/}
-              {/*  items={[*/}
-              {/*    { label: <Trans>navigation.home</Trans>, url: '/' },*/}
-              {/*    ...(page.type*/}
-              {/*      ? [{ label: `${page.type} `, url: getTypeUrl(page.type) }]*/}
-              {/*      : []), // Conditionally include type with URL*/}
-              {/*    { label: page.title },*/}
-              {/*  ]}*/}
-              {/*/>*/}
-              <Navbar theme={'light'} />
+              {/* You may add breadcrumb navigation here if needed */}
+              <Navbar theme="light" />
               <Page gap="50px" id="dynamic_pages">
+                {/* Optionally display the dynamic page title */}
+                {/*<h1>{getTitleByLanguage(page)}</h1>*/}
                 <div
-                  id="about_page_text"
-                  dangerouslySetInnerHTML={{ __html: page.content }}
+                  id="dynamic_page_content"
+                  dangerouslySetInnerHTML={{
+                    __html: getContentByLanguage(page),
+                  }}
                 />
               </Page>
               <Footer />
@@ -72,7 +90,7 @@ const DynamicPages: React.FC = () => {
           }
         />
       ))}
-      {/* Fallback route to NotFound if no page is matched */}
+      {/* Fallback route for non-matching paths */}
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

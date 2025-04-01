@@ -5,10 +5,15 @@ import Page from '../../components/Page.tsx';
 import Footer from '../../components/Footer/Footer.tsx';
 import { Link } from 'react-router-dom';
 import PageLoading from '../../components/PageLoading/PageLoading.tsx';
+import { useTranslation } from 'react-i18next';
 
 interface NewsItem {
-  title: string;
-  description: string;
+  title_ro: string;
+  title_ru: string;
+  title_en: string;
+  description_ro: string;
+  description_ru: string;
+  description_en: string;
   to?: string; // 'to' is optional
   img?: string; // 'img' is optional
   date?: string;
@@ -17,6 +22,32 @@ interface NewsItem {
 const News: React.FC = () => {
   const [showBlogPosts, setBlogPosts] = useState<NewsItem[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+
+  const { t, i18n } = useTranslation();
+
+  const getTitleByLanguage = (item: NewsItem): string => {
+    switch (i18n.language) {
+      case 'ro':
+        return item.title_ro;
+      case 'ru':
+        return item.title_ru;
+      case 'en':
+      default:
+        return item.title_en;
+    }
+  };
+
+  const getDescriptionByLanguage = (item: NewsItem): string => {
+    switch (i18n.language) {
+      case 'ro':
+        return item.description_ro;
+      case 'ru':
+        return item.description_ru;
+      case 'en':
+      default:
+        return item.description_en;
+    }
+  };
 
   useEffect(() => {
     const fetchBlogPosts = async () => {
@@ -45,7 +76,7 @@ const News: React.FC = () => {
     <div className={styles.news}>
       <Navbar />
       <Page>
-        <div className={'page_title'}>News</div>
+        <div className={'page_title'}>{t('navbar.news')}</div>
 
         <div className={styles.news_page}>
           <div className={styles.blog_cards}>
@@ -69,8 +100,12 @@ const News: React.FC = () => {
                   ) : (
                     <div className={styles.blog_img_empty}></div>
                   )}
-                  <div className={styles.blog_title}>{item.title}</div>
-                  <div className={styles.blog_subtitle}>{item.description}</div>
+                  <div className={styles.blog_title}>
+                    {getTitleByLanguage(item)}
+                  </div>
+                  <div className={styles.blog_subtitle}>
+                    {getDescriptionByLanguage(item)}
+                  </div>
                 </Link>
               );
             })}
