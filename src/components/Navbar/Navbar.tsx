@@ -144,7 +144,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
           border={'var(--theme_primary_color_blue_4)'}
           hover_bgcolor={'var(--theme_primary_color_yellow_0)'}
           hover_border={'var(--theme_primary_color_yellow_0)'}
-          to="/contact"
+          to="/contacts"
           icon={'arrow_right'}
         >
           <span className={'span_special_text'}>{t('navbar.contact_us')}</span>

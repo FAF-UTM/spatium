@@ -36,7 +36,7 @@ export const routesConfig: RouteConfig[] = [
     element: React.createElement(News),
   },
   {
-    path: '/:lang/contact',
+    path: '/:lang/contacts',
     i18nKey: '',
     element: React.createElement(Contact),
   },
