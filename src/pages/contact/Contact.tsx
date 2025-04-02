@@ -6,7 +6,7 @@ import Footer from '../../components/Footer/Footer.tsx';
 import { useTranslation } from 'react-i18next';
 
 const Contact: React.FC = () => {
-  const { t} = useTranslation();
+  const { t } = useTranslation();
   return (
     <div className={styles.contact}>
       <Navbar />

@@ -8,7 +8,7 @@
     "description_ro": "Escape Van este un proiect mobil inovator care aduce în atenția publicului problemele traficului de ...",
     "description_ru": "Escape Van — это инновационный передвижной проект, освещающий проблему торговли людьми через ...",
     "description_en": "Escape Van is a unique, on-the-road project that brings the harsh realities of human trafficking ...",
-    "to": "/escape-van"
+    "to": "/project/escape-van"
   },
   {
     "img": "/images/24634622.png",
@@ -18,6 +18,6 @@
     "description_ro": "În prezent în dezvoltare, Trafficking Escape este un joc inovator conceput pentru ...",
     "description_ru": "Находящаяся в разработке игра Trafficking Escape — это инновационный проект, созданный ...",
     "description_en": "Currently in development, Trafficking Escape is an innovative game designed to raise ...",
-    "to": "/trafficking-escape"
+    "to": "/project/trafficking-escape"
   }
 ]

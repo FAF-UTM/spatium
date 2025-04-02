@@ -14,7 +14,7 @@
 }
 .topbnav_menu_home {
   transform: scale(0.95);
-  transform-origin:center left
+  transform-origin: center left;
 }
 .theme_light .topbnav_menu_home {
   transform: scale(0.6);
