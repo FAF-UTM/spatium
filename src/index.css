@@ -96,3 +96,41 @@ body {
 .sp_button:hover .Button_icon {
   margin: 0 -3px 0 3px;
 }
+h2 {
+  line-height: 1.2;
+}
+.gallery {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 1100px;
+  gap: 10px;
+}
+.gallery img {
+  width: 100%;
+  max-width: 250px;
+  max-height: 250px;
+}
+
+@media (max-width: 590px) {
+  .gallery img {
+    width: calc((100% - 10px) / 2);
+  }
+}
+@media (max-width: 400px) {
+  .gallery img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+#dynamic_page_content iframe {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 40px;
+  height: auto;
+  aspect-ratio: 16/9;
+}

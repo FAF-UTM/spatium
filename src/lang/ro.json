@@ -8,8 +8,10 @@
     "about_us": "Despre noi",
     "projects": "Proiecte",
     "contact_us": "Contacte",
-    "news": "Noutăți",
-    "gallery": "Galerie"
+    "news": "Noutăți / Evenimente",
+    "gallery": "Galerie",
+    "comunity": "Comunitate",
+    "history": "Istoria noastră"
   },
   "home": {
     "learn_more": "Mai multe",
@@ -43,5 +45,32 @@
       "text": "Ne imaginăm un viitor în care tehnologia este forța motrice a schimbării sociale — un viitor în care instrumentele digitale și informațiile de încredere contribuie la construirea unor comunități mai sigure și a unei societăți mai bine informate. Combinând excelența academică, colaborarea internațională și cercetarea de ultimă generație, SPATIUM se află în fruntea transformării ideilor în soluții care fac cu adevărat diferența."
     },
     "conclusion": ""
+  },
+  "contact": {
+    "title": "Contactează-ne",
+    "address_label": "Adresă",
+    "address": "cab 3-717, UTM, FCIM, Str. Studenților 9/7, Chișinău, Republica Moldova",
+    "located_in_label": "Situat în",
+    "located_in": "Universitatea Tehnică a Moldovei",
+    "hours_label": "Ore de lucru",
+    "hours": "9:00 - 17:00 (Lun - Vin)",
+    "phone_label": "Telefon",
+    "phone": "+373 (22) 509-907"
+  },
+  "history": {
+    "title": "Istoria noastră",
+    "p1": "În lumina adoptării Protocolului privind prevenirea, combaterea și sancționarea traficului de persoane, în special de femei și copii (2000), în cadrul Convenției ONU împotriva crimei organizate transfrontaliere a apărut conceptul de trafic de ființe umane. Această infracțiune, considerată o formă gravă de corupție, se materializează în momentul în care o persoană primește sau pretinde bani, influență sau alte bunuri, sau acceptă promisiuni sau daruri pentru a-şi utiliza influența asupra altora.",
+    "p2_1": "Cu scopul de a contribui activ la combaterea traficului de ființe umane,",
+    "utm": "Universitatea Tehnică a Moldovei (UTM)",
+    "p2_2": "și",
+    "dutch_police": "Poliția Națională a Olandei",
+    "p2_3": "au pus bazele Spatium Human Trafficking Research Center. Acest Centru se axează pe proiectarea de inovații tehnice și oferirea de sprijin în contracararea acestei forme grave de criminalitate. Activitățile Centrului includ procesul de inovare tehnică pentru organizarea evenimentelor și colectarea de date relevante despre fenomenul traficului de ființe umane.",
+    "p3": "„SPATIUM” își propune să participe într-o colaborare internațională cu alte centre de cercetare din țările europene ce activează pe alte dimensiuni din același context și care se va concentra pe oferirea suportului tehnologic avansat, informare și conștientizare, precum și cercetare pentru prevenirea și reducerea fenomenului traficului de persoane.",
+    "partnerships_title": "Parteneriate și Colaborări",
+    "partnerships": "Centrul colaborează cu diverse organizații și instituții pentru a-și atinge obiectivele. De exemplu, în organizarea hackathon-ului dedicat combaterii traficului de persoane, desfășurat în perioada 24-25 noiembrie 2023, Spatium Human Trafficking Research Center a beneficiat de sprijinul Poliției Naționale a Olandei, Ziarului de Gardă, Internews, Hope4 și OGK (Open Gate Kitchen). De asemenea, FAF ONG a avut o contribuție esențială în organizarea acestui eveniment.",
+    "academic_title": "Contribuții Academice",
+    "academic": "Membrii centrului sunt implicați activ în cercetarea fenomenului traficului de ființe umane. De exemplu, în cadrul unei conferințe științifice naționale cu participare internațională, organizată în noiembrie 2024, au fost prezentate lucrări care analizează proiecțiile tehnico-socio-culturale ale fenomenului crizei umanitare în contemporaneitate, evidențiind legătura dintre crizele umanitare și vulnerabilitatea la traficul de ființe umane.",
+    "education_title": "Educație și Sensibilizare",
+    "education": "Pe lângă activitățile de cercetare și dezvoltare tehnologică, centrul pune un accent deosebit pe educația și sensibilizarea publicului cu privire la riscurile și consecințele traficului de ființe umane. Prin organizarea de sesiuni de informare, workshop-uri și colaborări cu diverse organizații non-guvernamentale, Spatium Human Trafficking Research Center contribuie la creșterea gradului de conștientizare în rândul comunității și la formarea unei rețele de sprijin pentru victimele acestui fenomen."
   }
 }

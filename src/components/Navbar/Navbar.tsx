@@ -121,13 +121,13 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
             } ${theme != 'dark' && styles.theme_light_menu}`}
           >
             <Link to={'/about'} className={styles.topbnav_submenu_btn}>
-              About us
+              {t('navbar.about_us')}
             </Link>
             <Link to={'/history'} className={styles.topbnav_submenu_btn}>
-              Our history
+              {t('navbar.history')}
             </Link>
             <Link to={'/comunity'} className={styles.topbnav_submenu_btn}>
-              Comunity
+              {t('navbar.comunity')}
             </Link>
           </div>
         </div>

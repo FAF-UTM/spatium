@@ -12,7 +12,7 @@ const About: React.FC = () => {
     <div className={styles.about}>
       <Navbar />
       <Page>
-        <div className="page_title">{t('about.pageTitle')}</div>
+        <div className="page_title">{t('about.pageTitle')} </div>
 
         <div className={styles.about_text}>
           <div className={styles.about_title}>

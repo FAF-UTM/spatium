@@ -8,8 +8,10 @@
     "about_us": "About us",
     "projects": "Projects",
     "contact_us": "Contact us",
-    "news": "News",
-    "gallery": "Gallery"
+    "news": "News / Events",
+    "gallery": "Gallery",
+    "comunity": "Comunity",
+    "history": " Our history "
   },
   "home": {
     "learn_more": "Learn more",
@@ -43,5 +45,32 @@
       "text": "We envision a future where technology is the driving force behind social change — a future where digital tools and reliable information help build safer communities and a more informed society. By combining academic excellence, international collaboration, and cutting-edge research, SPATIUM is at the forefront of transforming ideas into solutions that make a real difference."
     },
     "conclusion": ""
+  },
+  "contact": {
+    "title": "Contact us",
+    "address_label": "Address",
+    "address": "cab 3-717, UTM, FCIM, Studentilor 9/7, Chisinau mun. Moldova, Republic of",
+    "located_in_label": "Located in",
+    "located_in": "Technical University of Moldova",
+    "hours_label": "Work hours",
+    "hours": "9:00 - 17:00 (Mon - Fri)",
+    "phone_label": "Phone",
+    "phone": "+373 (22) 509-907"
+  },
+  "history": {
+    "title": "Our History",
+    "p1": "Following the adoption of the Protocol to Prevent, Suppress and Punish Trafficking in Persons, Especially Women and Children (2000), under the UN Convention against Transnational Organized Crime, the concept of human trafficking emerged. This crime, considered a severe form of corruption, occurs when a person receives or requests money, influence, or other goods, or accepts promises or gifts to use their influence over others.",
+    "p2_1": "To actively contribute to combating human trafficking,",
+    "utm": "Technical University of Moldova (TUM)",
+    "p2_2": "and the",
+    "dutch_police": "Dutch National Police",
+    "p2_3": "laid the foundation for the Spatium Human Trafficking Research Center. This center focuses on designing technical innovations and providing support to counteract this serious crime. Its activities include technical innovation for event organization and the collection of relevant data on the human trafficking phenomenon.",
+    "p3": "SPATIUM aims to engage in international collaboration with other research centers across Europe working on related dimensions, focusing on offering advanced technological support, information, awareness, and research to prevent and reduce human trafficking.",
+    "partnerships_title": "Partnerships and Collaborations",
+    "partnerships": "The center collaborates with various organizations and institutions to achieve its goals. For example, during the hackathon against human trafficking held on November 24–25, 2023, the Spatium Human Trafficking Research Center was supported by the Dutch National Police, Ziarul de Gardă, Internews, Hope4, and OGK (Open Gate Kitchen). Additionally, the NGO FAF played an essential role in organizing the event.",
+    "academic_title": "Academic Contributions",
+    "academic": "Center members are actively involved in researching the phenomenon of human trafficking. For instance, at a national scientific conference with international participation in November 2024, they presented papers analyzing the techno-socio-cultural projections of the humanitarian crisis, highlighting the link between such crises and vulnerability to human trafficking.",
+    "education_title": "Education and Awareness",
+    "education": "Besides research and technological development, the center places great emphasis on public education and raising awareness of the risks and consequences of human trafficking. Through information sessions, workshops, and collaboration with NGOs, the Spatium Human Trafficking Research Center helps increase community awareness and builds a support network for victims of this phenomenon."
   }
 }

@@ -16,9 +16,9 @@
     "title_ru": "Хакатон 2024",
     "title_en": "Hackathon 2024",
     "date": "24.11.2024",
-    "description_ro": "Escape Van este un proiect unic, desfășurat pe teren, care aduce în prim-plan ...",
-    "description_ru": "Escape Van — уникальный проект, проходящий в дороге, который демонстрирует ...",
-    "description_en": "Escape Van is a unique, on-the-road project that brings the harsh realities ...",
+    "description_ro": "Lansarea Hackathonului cu tematica „Diminuarea fenomenului Traficului de ...",
+    "description_ru": "Запуск хакатона на тему «Снижение явления торговли людьми с ...",
+    "description_en": "Launch of the Hackathon on the topic “Reducing Human Trafficking ...",
     "to": "/news/hackathon"
   },
   {
@@ -31,5 +31,28 @@
     "description_ru": "Escape Van — это инновационный передвижной проект, освещающий проблему торговли людьми через ...",
     "description_en": "Escape Van is a unique, on-the-road project that brings the harsh realities of human trafficking ...",
     "to": "/news/escape-van"
+  },
+  {
+    "img": "/images/54534620.png",
+    "title_ro": "Ziua de instruire ",
+    "title_ru": "День обучения",
+    "title_en": "Training Day",
+    "date": "10.03.2024",
+    "description_ro": "Participă la Ziua de instruire Escape Van pentru a învăța cum să recunoști și ...",
+    "description_ru": "Примите участие в Дне обучения Escape Van, чтобы узнать, как распознавать и ...",
+    "description_en": "Join the Escape Van Training Day to learn how to recognize and prevent ...",
+    "to": "/event/escape-van-training-day"
+  },
+  {
+    "img": "/images/22370622.jpg",
+    "title_ro": "Semnarea acordului Escape Van",
+    "title_ru": "Подписание соглашения Escape Van",
+    "title_en": "Escape Van Agreement Signing",
+    "date": "22.02.2024",
+    "description_ro": "Semnarea oficială a acordului de colaborare pentru lansarea proiectului Escape Van – un pas important în lupta împotriva traficului de persoane.",
+    "description_ru": "Официальное подписание соглашения о сотрудничестве по запуску проекта Escape Van – важный шаг в борьбе с торговлей людьми.",
+    "description_en": "Official signing of the collaboration agreement for launching the Escape Van project – a key milestone in the fight against human trafficking.",
+    "to": "/event/escape-van-agreement"
   }
+
 ]

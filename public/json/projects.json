@@ -19,5 +19,16 @@
     "description_ru": "Находящаяся в разработке игра Trafficking Escape — это инновационный проект, созданный ...",
     "description_en": "Currently in development, Trafficking Escape is an innovative game designed to raise ...",
     "to": "/project/trafficking-escape"
+  },
+  {
+    "img": "/images/24534624.png",
+    "title_ro": "Hackathon 2024",
+    "title_ru": "Хакатон 2024",
+    "title_en": "Hackathon 2024",
+    "date": "24.11.2024",
+    "description_ro": "Lansarea Hackathonului cu tematica „Diminuarea fenomenului Traficului de ...",
+    "description_ru": "Запуск хакатона на тему «Снижение явления торговли людьми с ...",
+    "description_en": "Launch of the Hackathon on the topic “Reducing Human Trafficking ...",
+    "to": "/project/hackathon"
   }
 ]
