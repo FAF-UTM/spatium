@@ -29,6 +29,10 @@ const Contact: React.FC = () => {
           <b>{t('contact.phone_label')}:</b>{' '}
           <a href="tel:+373022509907">{t('contact.phone')}</a>
         </div>
+        <div>
+          <b>{t('contact.email')}:</b>{' '}
+          <a href="mailto:mailto:spatium.utm.md@gmail.com">spatium.utm.md@gmail.com</a>
+        </div>
 
         <iframe
           className={styles.contact_iframe}
@@ -36,7 +40,7 @@ const Contact: React.FC = () => {
           width="800"
           height="300"
           style={{ border: 0 }}
-          loading="lazy"
+          loading="eager"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </Page>

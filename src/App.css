@@ -48,3 +48,20 @@
   font-weight: 500;
   line-height: normal;
 }
+
+.tags{
+display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 5px 0 0;
+}
+.tag{
+  color: var(--theme_primary_color_yellow_0);
+  /*opacity: 0.7;*/
+  font-weight: 600;
+  transform: scale(1);
+  transition: transform 0.2s ease-in-out;
+}
+.tag:hover{
+  transform: scale(1.02);
+}

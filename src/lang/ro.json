@@ -49,13 +49,14 @@
   "contact": {
     "title": "Contactează-ne",
     "address_label": "Adresă",
-    "address": "cab 3-717, UTM, FCIM, Str. Studenților 9/7, Chișinău, Republica Moldova",
+    "address": "UTM, FCIM, Str. Studenților 9/7 cab 3-717, Chișinău, Republica Moldova, MD-2045",
     "located_in_label": "Situat în",
     "located_in": "Universitatea Tehnică a Moldovei",
     "hours_label": "Ore de lucru",
-    "hours": "9:00 - 17:00 (Lun - Vin)",
+    "hours": "9:00 - 17:00 (GTM+2) (Lun - Vin)",
     "phone_label": "Telefon",
-    "phone": "+373 (22) 509-907"
+    "phone": "+373 (22) 509-907",
+    "email": "Email"
   },
   "history": {
     "title": "Istoria noastră",

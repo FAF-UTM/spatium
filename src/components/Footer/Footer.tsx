@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.css';
-import Button from '../Button.tsx';
-import Icon from '../Icon.tsx';
+// import Button from '../Button.tsx';
+// import Icon from '../Icon.tsx';
 import { useTranslation } from 'react-i18next';
 import LinkButton from '../LinkButton.tsx';
 
@@ -18,15 +18,15 @@ const Footer: React.FC<FooterProps> = ({
 }) => {
   const {
     t,
-    i18n: {},
+    // i18n: {},
   } = useTranslation();
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth', // This triggers the smooth scrolling
-    });
-  };
+  // const scrollToTop = () => {
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: 'smooth', // This triggers the smooth scrolling
+  //   });
+  // };
 
   return (
     <div className={`footer ${className}`} style={{ ...style }}>
@@ -216,21 +216,22 @@ const Footer: React.FC<FooterProps> = ({
       </div>
 
       {button == true ? (
-        <Button
-          onClick={scrollToTop}
-          border="#333"
-          border_radius="100px"
-          id="footer_btn_scroll_up"
-        >
-          {t('footer.scroll_up')}
-          <Icon
-            type="arrow"
-            rotate="-90"
-            color="var(--theme_primary_color_black)"
-            width="30px"
-            height="30px"
-          />
-        </Button>
+        // <Button
+        //   onClick={scrollToTop}
+        //   border="#333"
+        //   border_radius="100px"
+        //   id="footer_btn_scroll_up"
+        // >
+        //   {t('footer.scroll_up')}
+        //   <Icon
+        //     type="arrow"
+        //     rotate="-90"
+        //     color="var(--theme_primary_color_black)"
+        //     width="30px"
+        //     height="30px"
+        //   />
+        // </Button>
+        <></>
       ) : null}
     </div>
   );

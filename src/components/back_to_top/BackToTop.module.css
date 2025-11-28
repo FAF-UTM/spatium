@@ -1,0 +1,23 @@
+.scroll_block {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #fff;
+  height: 40px;
+  width: 40px;
+  border-radius: 8px;
+  transform: rotate(-90deg) scale(1);
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  transition: 0.2s transform ease-in-out;
+}
+.scrolled {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.scroll_block:hover {
+  transform: rotate(-90deg) scale(1.05);
+}

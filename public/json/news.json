@@ -1,5 +1,16 @@
 [
   {
+    "img": "/images/02537028.jpg",
+    "title_ro": "Conferință internațională",
+    "title_ru": "Международная конференция",
+    "title_en": "International Conference",
+    "date": "15.05.2025",
+    "description_ro": "Prima secțiune a conferinței internaționale „Innovative Research Approaches in Combating Human Trafficking International Conference”,Pécs (Ungaria), ...",
+    "description_ru": "Первая секция международной конференции «Innovative Research Approaches in Combating Human Trafficking International Conference», Печ (Венгрия), на юридическом ...",
+    "description_en": "The first section of the “Innovative Research Approaches in Combating Human Trafficking International Conference”, held at Pécs (Ungaria)...",
+    "to": "/event/hungary-international-conference-2025"
+  },
+  {
     "img": "/images/24534626.png",
     "title_ro": "Trafficking Escape",
     "title_ru": "Trafficking Escape",
@@ -54,5 +65,4 @@
     "description_en": "Official signing of the collaboration agreement for launching the Escape Van project – a key milestone in the fight against human trafficking.",
     "to": "/event/escape-van-agreement"
   }
-
 ]

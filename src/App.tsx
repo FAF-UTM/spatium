@@ -8,6 +8,7 @@ import i18n from './i18n.tsx';
 import { routesConfig } from './routesConfig.tsx';
 import DynamicPages from './components/DynamicPages/DynamicPages.tsx';
 import NotFound from './pages/notfound/NotFound.tsx';
+import BackToTop from './components/back_to_top/BackToTop.tsx';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
               <Route path="/*" element={<DynamicPages />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
+            <BackToTop/>
           </LanguageProvider>
         </BrowserRouter>
       </I18nextProvider>

@@ -98,7 +98,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
             <Link to={'/news'} className={styles.topbnav_submenu_btn}>
               {t('navbar.news')}
             </Link>
-            <Link to={'/gallery'} className={styles.topbnav_submenu_btn}>
+            <Link to={'https://drive.google.com/drive/folders/1pbsiRqATwLD1ECyoCMK00BngCERKViIU?usp=sharing'} className={styles.topbnav_submenu_btn}>
               {t('navbar.gallery')}
             </Link>
           </div>
@@ -126,7 +126,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
             <Link to={'/history'} className={styles.topbnav_submenu_btn}>
               {t('navbar.history')}
             </Link>
-            <Link to={'/comunity'} className={styles.topbnav_submenu_btn}>
+            <Link to={'https://www.facebook.com/profile.php?id=61551722136267'} className={styles.topbnav_submenu_btn}>
               {t('navbar.comunity')}
             </Link>
           </div>
