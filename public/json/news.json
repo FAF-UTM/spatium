@@ -45,7 +45,7 @@
   },
   {
     "img": "/images/54534620.png",
-    "title_ro": "Ziua de instruire ",
+    "title_ro": "Ziua de instruire",
     "title_ru": "День обучения",
     "title_en": "Training Day",
     "date": "10.03.2024",
@@ -53,6 +53,17 @@
     "description_ru": "Примите участие в Дне обучения Escape Van, чтобы узнать, как распознавать и ...",
     "description_en": "Join the Escape Van Training Day to learn how to recognize and prevent ...",
     "to": "/event/escape-van-training-day"
+  },
+  {
+    "img": "/images/54534691.jpg",
+    "title_ro": "Ambasada Regatului Țărilor de Jos în Polonia",
+    "title_ru": "Посольство Королевства Нидерландов в Польше",
+    "title_en": "Embassy of the Netherlands in Poland",
+    "date": "27.02.2024",
+    "description_ro": "Traficul de ființe umane este un fenomen ce ne vizează pe fiecare...",
+    "description_ru": "Торговля людьми — это явление, которое касается каждого из нас...",
+    "description_en": "Human trafficking is a phenomenon that concerns each of us...",
+    "to": "/event/embassy-of-the-netherlands-in-poland"
   },
   {
     "img": "/images/22370622.jpg",
