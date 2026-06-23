@@ -1,0 +1,49 @@
+.blog_cards {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 25px;
+}
+.link {
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0px;
+}
+.galery_block {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: flex-start;
+}
+.galery_block_img {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blog_date {
+  opacity: 0.7;
+  font-size: 14px;
+}
+.blog_title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22.5px;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  width: 100%;
+  color: var(--theme_primary_color_black);
+}
+
+@media (max-width: 455px) {
+  .galery_block {
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+}

@@ -26,7 +26,7 @@ function App() {
               <Route path="/*" element={<DynamicPages />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
-            <BackToTop/>
+            <BackToTop />
           </LanguageProvider>
         </BrowserRouter>
       </I18nextProvider>

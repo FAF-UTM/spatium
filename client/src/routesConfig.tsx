@@ -6,6 +6,7 @@ import Projects from './pages/projects/Projects.tsx';
 import News from './pages/news/News.tsx';
 import Contact from './pages/contact/Contact.tsx';
 import History from './pages/history/History.tsx';
+import Galery from './pages/galery/Galery.tsx';
 
 export interface RouteConfig {
   path: string;
@@ -39,6 +40,11 @@ export const routesConfig: RouteConfig[] = [
     path: '/:lang/contacts',
     i18nKey: '',
     element: React.createElement(Contact),
+  },
+  {
+    path: '/:lang/galery',
+    i18nKey: '',
+    element: React.createElement(Galery),
   },
   {
     path: '/:lang/history',

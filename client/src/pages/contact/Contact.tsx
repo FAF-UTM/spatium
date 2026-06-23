@@ -31,7 +31,9 @@ const Contact: React.FC = () => {
         </div>
         <div>
           <b>{t('contact.email')}:</b>{' '}
-          <a href="mailto:mailto:spatium.utm.md@gmail.com">spatium.utm.md@gmail.com</a>
+          <a href="mailto:mailto:spatium.utm.md@gmail.com">
+            spatium.utm.md@gmail.com
+          </a>
         </div>
 
         <iframe
