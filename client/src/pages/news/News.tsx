@@ -6,6 +6,7 @@ import Footer from '../../components/Footer/Footer.tsx';
 import { Link } from 'react-router-dom';
 import PageLoading from '../../components/PageLoading/PageLoading.tsx';
 import { useTranslation } from 'react-i18next';
+import { listCards } from '../../api/content';
 
 interface NewsItem {
   title_ro: string;
@@ -52,12 +53,8 @@ const News: React.FC = () => {
   useEffect(() => {
     const fetchBlogPosts = async () => {
       try {
-        const response = await fetch(`/json/news.json`);
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        setBlogPosts(data); // Set the fetched blog posts
+        const res = await listCards('news');
+        setBlogPosts(res.data); // Set the fetched blog posts
       } catch (error) {
         console.error('Error fetching news data:', error);
       } finally {

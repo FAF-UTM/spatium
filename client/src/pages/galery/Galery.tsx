@@ -6,6 +6,7 @@ import Footer from '../../components/Footer/Footer.tsx';
 import PageLoading from '../../components/PageLoading/PageLoading.tsx';
 import { useTranslation } from 'react-i18next';
 import Icon from '../../components/Icon.tsx';
+import { listCards } from '../../api/content';
 
 interface NewsItem {
   title_ro: string;
@@ -17,6 +18,7 @@ interface NewsItem {
   to?: string; // 'to' is optional
   img?: string; // 'img' is optional
   date?: string;
+  images?: { url: string; publicId: string }[];
 }
 
 const Galery: React.FC = () => {
@@ -52,14 +54,10 @@ const Galery: React.FC = () => {
   useEffect(() => {
     const fetchBlogPosts = async () => {
       try {
-        const response = await fetch(`/json/galery.json`);
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        setBlogPosts(data); // Set the fetched blog posts
+        const res = await listCards('gallery');
+        setBlogPosts(res.data); // Set the fetched gallery items
       } catch (error) {
-        console.error('Error fetching news data:', error);
+        console.error('Error fetching gallery data:', error);
       } finally {
         setLoading(false); // Stop loading indicator
       }
@@ -116,10 +114,32 @@ const Galery: React.FC = () => {
                     <div className={styles.blog_subtitle}>
                       {getDescriptionByLanguage(item)}
                     </div>
-                    <a href={hasLink ? item.to! : '#'} className={styles.link}>
-                      See all materials{' '}
-                      <Icon type={'arrow_right'} color={'rgb(208, 173, 240)'} />
-                    </a>
+                    {item.images && item.images.length > 0 && (
+                      <div className={styles.galery_images}>
+                        {item.images.map((image, imgIndex) => (
+                          <a
+                            key={imgIndex}
+                            href={image.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.galery_image_link}
+                          >
+                            <img
+                              src={image.url}
+                              alt={getTitleByLanguage(item)}
+                              loading="lazy"
+                              className={styles.galery_image}
+                            />
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                    {hasLink && (
+                      <a href={item.to!} className={styles.link}>
+                        See all materials{' '}
+                        <Icon type={'arrow_right'} color={'rgb(208, 173, 240)'} />
+                      </a>
+                    )}
                   </div>
                 </div>
                 // <Link

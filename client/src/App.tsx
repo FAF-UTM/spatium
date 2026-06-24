@@ -3,6 +3,7 @@ import Home from './pages/home/Home.tsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './i18n';
 import { LanguageProvider } from './context/LanguageContext.tsx';
+import { AuthProvider } from './context/AuthContext.tsx';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n.tsx';
 import { routesConfig } from './routesConfig.tsx';
@@ -15,19 +16,21 @@ function App() {
     <>
       <I18nextProvider i18n={i18n}>
         <BrowserRouter>
-          <LanguageProvider>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/:lang/" element={<Home />} />
+          <AuthProvider>
+            <LanguageProvider>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/:lang/" element={<Home />} />
 
-              {routesConfig.map((route, index) => (
-                <Route key={index} path={route.path} element={route.element} />
-              ))}
-              <Route path="/*" element={<DynamicPages />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-            <BackToTop />
-          </LanguageProvider>
+                {routesConfig.map((route, index) => (
+                  <Route key={index} path={route.path} element={route.element} />
+                ))}
+                <Route path="/*" element={<DynamicPages />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+              <BackToTop />
+            </LanguageProvider>
+          </AuthProvider>
         </BrowserRouter>
       </I18nextProvider>
     </>

@@ -1,0 +1,4 @@
+# Cloudflare Pages SPA fallback: serve index.html for any path that isn't a
+# real static asset, so client-side routes resolve. Static files (e.g.
+# /assets/*, /images/*) are served directly and take precedence over this rule.
+/*    /index.html   200

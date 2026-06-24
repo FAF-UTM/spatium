@@ -1,0 +1,52 @@
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.track {
+  width: 38px;
+  height: 22px;
+  border-radius: 100px;
+  background: #cbd2e0;
+  position: relative;
+  transition: background 0.15s ease;
+  display: inline-block;
+}
+
+.knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  transition: transform 0.15s ease;
+}
+
+.on .track {
+  background: #137333;
+}
+.on .knob {
+  transform: translateX(16px);
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #6b7280;
+  min-width: 44px;
+  text-align: left;
+}
+.on .label {
+  color: #137333;
+}

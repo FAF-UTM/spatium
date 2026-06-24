@@ -47,3 +47,25 @@
     flex-direction: column;
   }
 }
+
+/* Multi-image gallery grid for each album */
+.galery_images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 4px;
+}
+.galery_image_link {
+  display: block;
+  line-height: 0;
+}
+.galery_image {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.15s ease;
+}
+.galery_image_link:hover .galery_image {
+  transform: scale(1.04);
+}

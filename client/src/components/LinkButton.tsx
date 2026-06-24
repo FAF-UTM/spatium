@@ -84,7 +84,7 @@ const LinkButton: React.FC<LinkButtonProps> = ({
 
 // Function to darken the color
 function shadeColor(color: string, percent: number) {
-  let num = parseInt(color.replace('#', ''), 16),
+  const num = parseInt(color.replace('#', ''), 16),
     amt = Math.round(2.55 * percent),
     R = (num >> 16) + amt,
     G = ((num >> 8) & 0x00ff) + amt,

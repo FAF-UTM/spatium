@@ -7,6 +7,8 @@ import News from './pages/news/News.tsx';
 import Contact from './pages/contact/Contact.tsx';
 import History from './pages/history/History.tsx';
 import Galery from './pages/galery/Galery.tsx';
+import Login from './pages/login/Login.tsx';
+import Admin from './pages/admin/Admin.tsx';
 
 export interface RouteConfig {
   path: string;
@@ -50,5 +52,15 @@ export const routesConfig: RouteConfig[] = [
     path: '/:lang/history',
     i18nKey: '',
     element: React.createElement(History),
+  },
+  {
+    path: '/:lang/login',
+    i18nKey: '',
+    element: React.createElement(Login),
+  },
+  {
+    path: '/:lang/admin/*',
+    i18nKey: '',
+    element: React.createElement(Admin),
   },
 ];

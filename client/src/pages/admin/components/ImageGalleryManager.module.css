@@ -1,0 +1,119 @@
+.wrap {
+  border: 1px solid #e6e8f0;
+  border-radius: 12px;
+  padding: 14px;
+  background: #fff;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.count {
+  font-size: 13px;
+  font-weight: 700;
+  color: #6b7280;
+}
+
+.add {
+  padding: 8px 16px;
+  border: 1px solid var(--theme_primary_color_blue_0, #102a4c);
+  border-radius: 100px;
+  background: var(--theme_primary_color_blue_0, #102a4c);
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+}
+.add:hover:not(:disabled) {
+  background: var(--theme_primary_color_yellow_0, #f9b517);
+  color: var(--theme_primary_color_blue_0, #102a4c);
+  border-color: var(--theme_primary_color_yellow_0, #f9b517);
+}
+.add:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background: #fde8e8;
+  color: #b42318;
+  font-size: 13px;
+}
+
+.empty {
+  margin: 6px 0;
+  font-size: 13px;
+  color: #8a93a6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.tile {
+  border: 1px solid #e6e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f3f5ff;
+}
+
+.thumb {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  display: block;
+}
+
+.tools {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 6px;
+  background: #fff;
+}
+.tools button {
+  width: 26px;
+  height: 26px;
+  border: 1px solid #d4d8e3;
+  border-radius: 6px;
+  background: #fff;
+  color: #231f20;
+  cursor: pointer;
+  font-size: 11px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.tools button:hover:not(:disabled) {
+  background: #eef0f6;
+}
+.tools button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.pos {
+  font-size: 12px;
+  font-weight: 700;
+  color: #6b7280;
+  min-width: 16px;
+  text-align: center;
+}
+.del {
+  color: #b42318 !important;
+  border-color: #f3c0bb !important;
+  margin-left: 2px;
+}
+.del:hover {
+  background: #fde8e8 !important;
+}

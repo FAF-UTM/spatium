@@ -159,7 +159,7 @@ const Button: React.FC<ButtonProps> = ({
     >
       {React.Children.map(children, (child) => {
         if (isValidElement(child) && child.type === Icon) {
-          return React.cloneElement(child as ReactElement<any>, {
+          return React.cloneElement(child as ReactElement<{ color?: string }>, {
             color: buttonIconColor,
           });
         }

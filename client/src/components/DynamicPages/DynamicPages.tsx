@@ -6,6 +6,7 @@ import Page from '../Page';
 import './DynamicPages.css';
 import Navbar from '../Navbar/Navbar';
 import { useTranslation } from 'react-i18next';
+import { listPages } from '../../api/content';
 
 interface DynamicPage {
   link: string;
@@ -48,17 +49,13 @@ const DynamicPages: React.FC = () => {
   };
 
   useEffect(() => {
-    // Fetch the pages.json file from the public folder
+    // Fetch dynamic pages from the CMS API.
     const fetchPages = async () => {
       try {
-        const response = await fetch(`/json/pages.json`);
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        setDynamicPages(data);
+        const res = await listPages();
+        setDynamicPages(res.data);
       } catch (error) {
-        console.error('Failed to load pages.json:', error);
+        console.error('Failed to load pages:', error);
       }
     };
 

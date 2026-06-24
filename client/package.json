@@ -10,8 +10,8 @@
     "preview": "vite preview",
     "format": "prettier --write .",
     "check-format": "prettier --check .",
-    "deploy": "yarn build && wrangler pages deploy ./dist --project-name=spatium",
-    "predeploy": "yarn build"
+    "predeploy": "yarn build",
+    "deploy": "wrangler pages deploy ./dist --project-name=spatium"
   },
   "dependencies": {
     "i18next": "^24.1.0",

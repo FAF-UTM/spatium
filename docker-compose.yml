@@ -1,0 +1,31 @@
+# Local end-to-end test of the production images.
+#   docker compose up --build
+#   frontend -> http://localhost:8080   backend -> http://localhost:3000
+#
+# Uses your real server/.env (MongoDB Atlas, Cloudinary, JWT, etc.).
+services:
+  server:
+    build:
+      context: ./server
+    env_file:
+      - ./server/.env
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      # Allow the local frontend container origin through CORS.
+      - CLIENT_URL=http://localhost:8080
+    ports:
+      - '3000:3000'
+    restart: unless-stopped
+
+  client:
+    build:
+      context: ./client
+      args:
+        # The browser talks to the backend on the host, not the compose network.
+        VITE_API_URL: http://localhost:3000
+    ports:
+      - '8080:8080'
+    depends_on:
+      - server
+    restart: unless-stopped

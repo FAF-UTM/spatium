@@ -1,0 +1,110 @@
+.login_page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color-scheme: light;
+}
+
+.login_wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px 60px;
+  box-sizing: border-box;
+}
+
+.login_card {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 40px 32px;
+  border: 1px solid #e6e8f0;
+  border-radius: 16px;
+  background: var(--theme_primary_color_white);
+  box-shadow: 0 10px 40px rgba(16, 42, 76, 0.08);
+}
+
+.login_title {
+  margin: 0;
+  font-family: 'PF DinDisplay Pro', sans-serif;
+  font-weight: 900;
+  font-size: 28px;
+  color: var(--theme_primary_color_blue_0);
+}
+
+.login_subtitle {
+  margin: 0 0 16px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.login_label {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--theme_primary_color_blue_0);
+}
+
+.login_input {
+  padding: 12px 14px;
+  border: 1px solid #d4d8e3;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  background: #fff;
+  color: #231f20;
+  transition: border-color 0.2s ease;
+}
+
+.login_input:focus {
+  border-color: var(--theme_primary_color_yellow_0);
+}
+
+.login_button {
+  margin-top: 20px;
+  padding: 13px;
+  border: none;
+  border-radius: 100px;
+  background: var(--theme_primary_color_blue_0);
+  color: #fff;
+  font-family: 'PF DinDisplay Pro', sans-serif;
+  font-weight: 900;
+  font-size: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.login_button:hover:not(:disabled) {
+  background: var(--theme_primary_color_yellow_0);
+  color: var(--theme_primary_color_blue_0);
+}
+
+.login_button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login_error {
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #fde8e8;
+  color: #b42318;
+  font-size: 14px;
+}
+
+.login_back {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--theme_primary_color_blue_0);
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.login_back:hover {
+  opacity: 1;
+}

@@ -6,6 +6,7 @@ import Footer from '../../components/Footer/Footer';
 import { Link } from 'react-router-dom';
 import PageLoading from '../../components/PageLoading/PageLoading';
 import { useTranslation } from 'react-i18next';
+import { listCards } from '../../api/content';
 
 interface ProjectItem {
   title_ro: string;
@@ -51,12 +52,8 @@ const Projects: React.FC = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch(`/json/projects.json`);
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        setProjects(data); // Set the fetched projects data
+        const res = await listCards('projects');
+        setProjects(res.data); // Set the fetched projects data
       } catch (error) {
         console.error('Error fetching projects data:', error);
       } finally {

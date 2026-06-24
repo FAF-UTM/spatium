@@ -24,3 +24,8 @@ dist-ssr
 *.sw?
 
 .env
+
+# Local production build config (public API URL set per-deploy)
+.env.production
+.env.production.local
+.env.local
