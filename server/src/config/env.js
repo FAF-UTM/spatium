@@ -44,6 +44,11 @@ const config = {
 
   sessionSecret: required('SESSION_SECRET'),
 
+  // Optional static "break-glass" admin token. When set, this exact token works
+  // as a Bearer token that always authenticates as admin and never expires.
+  // Leave unset to disable. Rotate/clear to revoke.
+  masterAdminToken: optional('MASTER_ADMIN_TOKEN'),
+
   cloudinary: {
     cloudName: required('CLOUDINARY_CLOUD_NAME'),
     apiKey: required('CLOUDINARY_API_KEY'),

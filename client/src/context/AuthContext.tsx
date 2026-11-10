@@ -21,6 +21,7 @@ interface AuthContextValue {
   isAuthenticated: boolean;
   isAdmin: boolean;
   login: (identifier: string, password: string) => Promise<User>;
+  loginWithToken: (token: string) => Promise<User>;
   logout: () => Promise<void>;
 }
 
@@ -64,6 +65,21 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     return res.user;
   }, []);
 
+  // Log in by storing a token directly (e.g. a master/break-glass admin token
+  // passed via a ?token= login link) and loading the user it resolves to.
+  const loginWithToken = useCallback(async (token: string) => {
+    setToken(token);
+    try {
+      const res = await request<MeResponse>('/auth/me', { auth: true });
+      setUser(res.user);
+      return res.user;
+    } catch (err) {
+      clearToken();
+      setUser(null);
+      throw err;
+    }
+  }, []);
+
   const logout = useCallback(async () => {
     try {
       await request('/auth/logout', { method: 'POST', auth: true });
@@ -80,6 +96,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     isAuthenticated: !!user,
     isAdmin: user?.role === 'admin',
     login,
+    loginWithToken,
     logout,
   };
 

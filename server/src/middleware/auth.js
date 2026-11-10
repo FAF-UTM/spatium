@@ -33,6 +33,19 @@ function extractToken(req) {
 }
 
 /**
+ * If a static master admin token is configured and matches, resolve the
+ * oldest admin user to act as. This is a never-expiring break-glass login:
+ * the token never changes and always authenticates as admin. Revoke it by
+ * rotating (or clearing) the MASTER_ADMIN_TOKEN env var.
+ * @param {string} token
+ * @returns {Promise<import('mongoose').Document|null>}
+ */
+async function resolveMasterAdmin(token) {
+  if (!config.masterAdminToken || token !== config.masterAdminToken) return null;
+  return User.findOne({ role: 'admin' }).sort({ createdAt: 1 });
+}
+
+/**
  * Require a valid, authenticated user. Populates req.user.
  */
 async function protect(req, _res, next) {
@@ -40,6 +53,12 @@ async function protect(req, _res, next) {
     const token = extractToken(req);
     if (!token) {
       throw new ApiError(401, 'Authentication required');
+    }
+
+    const masterAdmin = await resolveMasterAdmin(token);
+    if (masterAdmin) {
+      req.user = masterAdmin;
+      return next();
     }
 
     let payload;
@@ -70,6 +89,11 @@ async function attachUserIfPresent(req, _res, next) {
   try {
     const token = extractToken(req);
     if (!token) return next();
+    const masterAdmin = await resolveMasterAdmin(token);
+    if (masterAdmin) {
+      req.user = masterAdmin;
+      return next();
+    }
     const payload = jwt.verify(token, config.jwt.secret);
     const user = await User.findById(payload.sub);
     if (user) req.user = user;

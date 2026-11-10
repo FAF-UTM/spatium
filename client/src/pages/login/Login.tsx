@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useNavigate, useParams, Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useParams, useSearchParams, Link } from 'react-router-dom';
 import styles from './login.module.css';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
@@ -9,12 +9,34 @@ import { ApiError } from '../../api/client';
 const Login: React.FC = () => {
   const { lang = 'ro' } = useParams();
   const navigate = useNavigate();
-  const { login } = useAuth();
+  const [searchParams] = useSearchParams();
+  const { login, loginWithToken } = useAuth();
 
   const [identifier, setIdentifier] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
+
+  // Token login: a ?token=... link signs straight in and lands on the dashboard.
+  const tokenParam = searchParams.get('token');
+  useEffect(() => {
+    if (!tokenParam) return;
+    let active = true;
+    (async () => {
+      setSubmitting(true);
+      try {
+        const user = await loginWithToken(tokenParam);
+        if (active) navigate(user.role === 'admin' ? `/${lang}/admin` : `/${lang}/`);
+      } catch {
+        if (active) setError('This login link is invalid or has expired.');
+      } finally {
+        if (active) setSubmitting(false);
+      }
+    })();
+    return () => {
+      active = false;
+    };
+  }, [tokenParam, loginWithToken, navigate, lang]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
