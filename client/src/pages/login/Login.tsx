@@ -21,6 +21,9 @@ const Login: React.FC = () => {
   const tokenParam = searchParams.get('token');
   useEffect(() => {
     if (!tokenParam) return;
+    // Strip the token from the URL immediately so it is not kept in browser
+    // history, bookmarks, or the Referer header on later navigations.
+    window.history.replaceState({}, '', window.location.pathname);
     let active = true;
     (async () => {
       setSubmitting(true);
