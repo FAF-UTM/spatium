@@ -1,13 +1,13 @@
 # syntax=docker/dockerfile:1
 
 # ---- Dependencies (production only) -------------------------------------
-FROM node:20-alpine AS deps
+FROM node:24-alpine AS deps
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci --omit=dev
 
 # ---- Runtime ------------------------------------------------------------
-FROM node:20-alpine AS runner
+FROM node:24-alpine AS runner
 WORKDIR /app
 ENV NODE_ENV=production
 # Default port; Northflank (or any platform) can override via the PORT env var.
